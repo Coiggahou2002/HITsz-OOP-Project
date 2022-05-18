@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TestController {
     @GetMapping("/test")
     @ResponseBody
-    public ApiResponse<String> test() {
-        return new ApiResponse<String>(200, "good", "happy");
+    public String test() {
+        return "happy";
     }
 }
