@@ -11,8 +11,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ApiResponse<T> {
+public class ApiResponse {
     private Integer code;
     private String msg;
-    private T data;
+    private Object data;
+
+    public static ApiResponse ofStatus(ApiResponseStatus status) {
+        return new ApiResponse(status.getCode(), status.getMsg(), null);
+    }
 }
