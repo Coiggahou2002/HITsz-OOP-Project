@@ -19,4 +19,8 @@ public class ApiResponse {
     public static ApiResponse ofStatus(ApiResponseStatus status) {
         return new ApiResponse(status.getCode(), status.getMsg(), null);
     }
+
+    public static ApiResponse ofStatusAndData(ApiResponseStatus status, Object data) {
+        return new ApiResponse(status.getCode(), status.getMsg(), data);
+    }
 }
