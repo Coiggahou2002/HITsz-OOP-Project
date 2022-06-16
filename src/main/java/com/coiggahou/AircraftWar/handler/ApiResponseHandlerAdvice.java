@@ -1,6 +1,7 @@
 package com.coiggahou.AircraftWar.handler;
 
 import com.coiggahou.AircraftWar.entity.ApiResponse;
+import com.coiggahou.AircraftWar.entity.ApiResponseStatus;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
@@ -25,8 +26,8 @@ public class ApiResponseHandlerAdvice implements ResponseBodyAdvice {
             return body;
         } else {
             ApiResponse apiResponse = new ApiResponse(
-                    200,
-                    "good",
+                    ApiResponseStatus.SUCCESS.getCode(),
+                    ApiResponseStatus.SUCCESS.getMsg(),
                     body
             );
             return apiResponse;
