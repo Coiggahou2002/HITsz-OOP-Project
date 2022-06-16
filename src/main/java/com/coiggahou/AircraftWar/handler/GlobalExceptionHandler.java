@@ -30,6 +30,7 @@ public class GlobalExceptionHandler {
                 "[全局异常拦截] 异常信息: {}",
                 e.getMessage()
                 );
+        e.printStackTrace();
         return ApiResponse.ofStatus(ApiResponseStatus.SERVER_ERROR);
     }
 
