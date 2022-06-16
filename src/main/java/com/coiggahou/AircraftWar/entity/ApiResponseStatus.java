@@ -5,37 +5,34 @@ package com.coiggahou.AircraftWar.entity;
  */
 public enum ApiResponseStatus {
 
-    /**
-     * 业务请求正常处理
-     */
     SUCCESS(10000, "success"),
 
-    /**
-     * 资源未找到
-     */
-    RESOURCE_NOT_FOUND(10002, "resource not found"),
+    RESOURCE_NOT_FOUND(10002, "资源未找到"),
 
-    /**
-     * 服务端错误
-     */
-    SERVER_ERROR(10005, "server error"),
+    SERVER_ERROR(10005, "服务端发生未知错误"),
 
-    REQUEST_NOT_FOUND(10006, "request not found"),
+    REQUEST_NOT_FOUND(10006, "请求不存在"),
 
-    /**
-     * 认证异常
-     */
-    AUTHENTICATION_ERROR(10001, "authentication error"),
+    VALIDATION_ERROR(30001, "参数校验异常"),
 
-    /**
-     * 用户不存在
-     */
-    USER_NOT_EXIST(20001, "user not exist"),
+    REQUEST_PARAM_ERROR(30002, "请求参数异常"),
 
-    /**
-     * 用户名或密码错误
-     */
-    USERNAME_OR_PASSWORD_ERROR(20002, "username or password error");
+    REGISTER_FAILED(20007, "注册失败"),
+
+    AUTHENTICATION_ERROR(10001, "认证异常"),
+
+    USER_NOT_EXIST(20001, "用户不存在"),
+
+    USERNAME_OR_PASSWORD_ERROR(20002, "用户名或密码错误"),
+
+    GAME_ROOM_NOT_EXIST(40000, "游戏房间不存在"),
+
+    GAME_ROOM_READY(40001, "匹配成功，可以开始游戏"),
+
+    COIN_NOT_ENOUGH(50001, "金钱不足，无法购买");
+
+
+
 
 
 
